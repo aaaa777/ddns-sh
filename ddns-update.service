@@ -1,0 +1,13 @@
+[Unit]
+Description=ddns script with conoha api
+After=syslog.target network.target
+ 
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/ddns-update
+WorkingDirectory=/opt/ddns-sh/
+KillMode=process
+#Restart=always
+User=pi
+Group=pi
+
